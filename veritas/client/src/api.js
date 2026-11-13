@@ -1,6 +1,9 @@
 export async function api(path, { method = 'GET', body } = {}) {
   const t = localStorage.getItem('token');
-  const res = await fetch('/api' + path, {
+  const API_URL = import.meta.env.VITE_API_URL || '';
+
+
+  const res = await fetch(`${API_URL}/api${path}`,{
     method, headers: { 'Content-Type': 'application/json', ...(t ? { Authorization: 'Bearer ' + t } : {}) },
     body: body ? JSON.stringify(body) : undefined,
   });
