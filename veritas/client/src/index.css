@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap');
+@tailwind base; @tailwind components; @tailwind utilities;
+@layer base {
+  body { @apply bg-paper text-ink font-sans antialiased; }
+  h1, h2, h3 { @apply font-serif; }
+  :focus-visible { outline: 2px solid #1F4E5F; outline-offset: 2px; }
+}
+@layer components {
+  .btn { @apply inline-flex items-center justify-center rounded px-3 py-1.5 text-sm font-medium border border-rule bg-white hover:bg-paper disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-primary { @apply bg-seal text-white border-seal hover:bg-seal/90; }
+  .btn-danger { @apply bg-white text-bad border-bad/50 hover:bg-bad/5; }
+  .input { @apply w-full rounded border border-rule bg-white px-3 py-2 text-sm; }
+  .card { @apply rounded border border-rule bg-white; }
+  .label { @apply block text-sm font-medium mb-1; }
+}

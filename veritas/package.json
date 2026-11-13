@@ -1,0 +1,14 @@
+{
+  "name": "veritas",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Veritas - evidence-first brand governance platform (Round 2 MVP)",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "build": "npm run build --prefix client",
+    "start": "npm start --prefix server",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "test": "npm test --prefix server"
+  }
+}
