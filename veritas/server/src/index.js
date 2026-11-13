@@ -18,6 +18,15 @@ app.use(cors({
 app.use(express.json({ limit: '200kb' }));
 app.use('/api', routes);
 
+
+app.get('/', (_req, res) => {
+  res.status(200).json({
+    status: 'ok',
+    message: 'Veritas API is running'
+  });
+});
+
+
 const dist = path.join(path.dirname(fileURLToPath(import.meta.url)), '../../client/dist');
 if (fs.existsSync(dist)) { app.use(express.static(dist)); app.get('*', (_q, res) => res.sendFile(path.join(dist, 'index.html'))); }
 
