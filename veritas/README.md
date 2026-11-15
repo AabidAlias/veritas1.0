@@ -60,4 +60,5 @@ Keyword retrieval can miss paraphrased facts (escalated to a human, not asserted
 `npm test` covers the Grounding Validator (verified, fabricated and missing citations; not-found escalation; expiry) and terminology rules. Structured user feedback: add notes here after testers try the demo.
 
 ## My role (fill in)
-Role: `[your role]`. Part I built: `[your own words]`.
+Role: Solo full-stack developer: I planned, designed, built, tested and deployed Veritas on my own.
+Part I built: The whole platform: React interface, Node/Express API, MongoDB data layer, Gemini AI review pipeline and the evidence validator.
